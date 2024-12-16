@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="We aim to enhance instructional video generation with a diffusion-based framework, achieving state-of-the-art results in hand motion clarity and task-specific region localization.">
+  <meta property="og:title" content="Instructional Video Generation"/>
+  <meta property="og:description" content="We aim to enhance instructional video generation with a diffusion-based framework, achieving state-of-the-art results in hand motion clarity and task-specific region localization."/>
+  <meta property="og:url" content="https://vision.huji.ac.il/conffusion1/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Instructional Video Generation"">
+  <meta name="twitter:description" content="We aim to enhance instructional video generation with a diffusion-based framework, achieving state-of-the-art results in hand motion clarity and task-specific region localization.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Instructional task guidance, Video Generation, Diffusion Model, Computer Vision, Deep Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>Instructional Video Generation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Instructional Video Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/yayuan-li-148659272/" target="_blank">Yayuan Li</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/zhi-cao-3147b1266/" target="_blank">Zhi Cao</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://web.eecs.umich.edu/~jjcorso/" target="_blank">Jason J. Corso</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">COG Research Group, University of Michigan</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2412.04189" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/ExcitedButter/Instructional-Video-Generation-IVG" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2412.04189" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Given an input image as context and a text prompt describing the action, our proposed two-stage diffusion-based model generates high-quality instructional video frames that are consistent with the given instruction. Our model excels at capturing (i) large hand positional motion without background hallucinations, (ii) object state changes, and (iii) precise fingertip motions, ensuring clarity and focus in cluttered instructional video scenes.
+      </h2>
+      <h2 class="subtitle has-text-centered">
+        More results are shown in 
+        <a href="#qualitative-results" class="is-link">
+          the gallery.
+        </a>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite the recent strides in video generation, state-of-the-art methods still struggle with elements of visual detail. One particularly challenging case is the class of egocentric instructional videos in which the intricate motion of the hand coupled with a mostly stable and non-distracting environment is necessary to convey the appropriate visual action instruction. To address these challenges, we introduce a new method for instructional video generation. Our diffusion-based method incorporates two distinct innovations. First, we propose an automatic method to generate the expected region of motion, guided by both the visual context and the action text. Second, we introduce a critical hand structure loss to guide the diffusion model to focus on smooth and consistent hand poses. We evaluate our method on augmented instructional datasets based on EpicKitchens and Ego4D, demonstrating significant improvements over state-of-the-art methods in terms of instructional clarity, especially of the hand motion in the target region, across diverse environments and actions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+<!-- Problem Setting -->
+<section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Problem Setting</h2>
+      <!-- Video -->
+      <div>
+        <img src="static/images/introduction_1.jpg" alt="Instructional Video Example 1" class="blend-img-background center-image" style="max-width: 85%; height: auto; display: block; margin: 0 auto;"/>
+        <em><strong>Instructional Video Generation (IVG):</strong></em>. The inputs are an image providing visual context and an action text prompt describing the task to be demonstrated. The outputs are generated video frames showing the action through detailed hand motion. Challenges include cluttered backgrounds and subtle, task-specific hand movements.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Method -->
+<section class="section hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Method Overview</h2>
+      <div>
+        <img src="static/images/method.jpg" alt="Method Structure Overview" class="blend-img-background center-image" style="max-width: 85%; height: auto; display: block; margin: 0 auto;"/>
+        Our method addresses the image-text to video generation problem for instructional content with a two-stage, backbone-shared approach. In Stage one, the model automatically predicts the Region of Motion (RoM)—the spatial area in the input image where task-relevant motion occurs. In Stage two, conditioned on this RoM, the model generates instructional video frames that focus on the action, avoiding distractions from cluttered backgrounds. Additionally, we introduce a hand structure loss, which ensures accurate and precise hand motions, critical for capturing subtle and task-specific fingertip movements, thereby enhancing the quality and clarity of instructional videos.
+      </div>
+   </div>
+ </div>
+</section>
+
+
+
+<!-- Qualitative Results -->
+<section id="qualitative-results" class="section hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Qualitative Results</h2>
+      <div>
+        <a href="https://excitedbutter.github.io/Instructional-Video-Generation/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="button is-link is-medium">
+          Visit Gallery
+        </a>
+      </div>
+   </div>
+ </div>
+</section>
+
+
+
+<!--Quantitative Results -->
+<section class="section hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Quantitative Results</h2>
+      <div>
+        <img src="static/images/baseline.png" alt="LoWRA Bench Details" class="blend-img-background center-image" style="max-width: 85%; height: auto; display: block; margin: 0 auto;"/>
+        Quantitative results on EpicKitchens, Ego4D and a Motion Intensive subset of EpicKitchens. Our method outperforms all baselines across all metrics on at least one dataset
+      </div>
+   </div>
+ </div>
+</section>
+
+
+
+  <!--Ablation Study -->
+  <section class="section hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Ablation Study</h2>
+        <div>
+          Ablation study on the EpicKitchens dataset, examining the impact of Region of Motion (RoM) mask generation (“Mask”) and Hand Structure Loss (“Hand”) on model performance. Each component is evaluated individually and in combination, demonstrating their contributions to improved visual quality and consistency across frames and videos.
+          <img src="static/images/ablation.png" alt="LoWRA Bench Details" class="blend-img-background center-image" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
+        </div>
+     </div>
+   </div>
+  </section>
+
+
+
+<!--BibTex Citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{li2024instructionalvideogeneration,
+        title={Instructional Video Generation}, 
+        author={Yayuan Li and Zhi Cao and Jason J. Corso},
+        year={2024},
+        eprint={2412.04189},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2412.04189}, 
+  }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
