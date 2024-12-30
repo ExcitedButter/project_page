@@ -138,10 +138,11 @@
         Given an input image as context and a text prompt describing the action, our proposed two-stage diffusion-based model generates high-quality instructional video frames that are consistent with the given instruction. Our model excels at capturing (i) large hand positional motion without background hallucinations, (ii) object state changes, and (iii) precise fingertip motions, ensuring clarity and focus in cluttered instructional video scenes.
       </h2>
       <h2 class="subtitle has-text-centered">
-        More samples and comparision between methods are shown in 
+        See 
         <a href="#qualitative-results" class="is-link">
-          the gallery.
-        </a>
+          Qualitative Results Section
+        </a> 
+        for comprehensive comparision.
       </h2>
     </div>
   </div>
@@ -205,12 +206,18 @@
   <div class="hero-body">
     <div class="container is-max-desktop">
       <h2 class="title is-3">Qualitative Results</h2>
+      <div class="content has-text-centered">
+        <video id="qualitative-video" autoplay loop muted playsinline class="center-image" style="max-width: 85%; height: auto; display: block; margin: 0 auto;">
+          <source src="static/videos/hand_loss_ablation.mp4" type="video/mp4">
+        </video>
+      </div>
+      <br>
       <div>
         <a href="https://excitedbutter.github.io/Instructional-Video-Generation/" 
            target="_blank" 
            rel="noopener noreferrer" 
            class="button is-link is-medium">
-          Visit Gallery
+          Comparison with Baselines (Video Samples)
         </a>
       </div>
    </div>
@@ -242,6 +249,15 @@
         <div>
           Ablation study on the EpicKitchens dataset, examining the impact of Region of Motion (RoM) mask generation (“Mask”) and Hand Structure Loss (“Hand”) on model performance. Each component is evaluated individually and in combination, demonstrating their contributions to improved visual quality and consistency across frames and videos.
           <img src="static/images/ablation.png" alt="LoWRA Bench Details" class="blend-img-background center-image" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
+        </div>
+        <br>
+        <div>
+          <a href="https://excitedbutter.github.io/Ablation-Study/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="button is-link is-medium">
+             Hand Structure Loss Ablation (Video Samples)
+          </a>
         </div>
      </div>
    </div>
